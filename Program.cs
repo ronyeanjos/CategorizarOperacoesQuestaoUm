@@ -2,6 +2,7 @@
 using CategorizarOperacoesQuestaoUm.Implementacoes;
 using CategorizarOperacoesQuestaoUm.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
+using System.Globalization;
 
 
 
@@ -22,7 +23,7 @@ List<string> RetornoDasCategorias = [];
 
 
 Console.WriteLine("Por favor preencher a data referencia: ");
-DataReferencia = DateTime.Parse(Console.ReadLine());
+DataReferencia = DateTime.Parse(Console.ReadLine(), new CultureInfo("en-US"));
 
 Console.WriteLine("Por favor preencher a quantidade de transações que serão inseridas");
 QuantidadeTransacoes = int.Parse(Console.ReadLine());

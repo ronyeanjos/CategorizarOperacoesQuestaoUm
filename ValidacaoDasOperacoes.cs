@@ -3,6 +3,7 @@ using CategorizarOperacoesQuestaoUm.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +32,7 @@ namespace CategorizarOperacoesQuestaoUm
 
                 double valor = double.Parse(linhaDaOperacao[0]);
                 string setorCliente = linhaDaOperacao[1];
-                DateTime proximaDataPagamento = DateTime.Parse(linhaDaOperacao[2]);
+                DateTime proximaDataPagamento = DateTime.Parse(linhaDaOperacao[2], new CultureInfo("en-US"));
 
                 operacoesClassificadas.Add(_classificacaoCategorias.ClassificarCategoria(valor, 
                                                                                          setorCliente, 
